@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset de margens para o banner encostar nas bordas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f0eb; /* Tom bege suave */
+    font-family: 'Poppins', sans-serif;
+    color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+/* Banner ocupando 100% da largura do topo */
+.logo-projeto {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.logo-projeto img {
+    width: 100%;
+    max-height: 300px;
+    display: block;
+}
+
+/* Container principal dos links */
+.links {
+    width: 100%;
+    max-width: 640px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card do Link */
+.link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: #ffffff;
+    border: 2px solid #e2d9cd; /* Borda elegante no tom do bege */
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagem à esquerda */
+.link img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Bloco de texto (Título + Botão) */
+.link > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Título (<p>) */
+.link p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    line-height: 1.4;
+}
+
+/* Botão do link (<a>) */
+.link a {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #2d5a4c; /* Verde escuro sofisticado para contraste */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.link a:hover {
+    background-color: #1e3d33;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 500px) {
+    .logo-projeto img {
+        max-height: 180px; /* Reduz a altura máxima do banner no celular */
+    }
+
+    .links {
+        padding: 0 12px; /* Aproveita melhor o espaço das laterais */
+        gap: 14px;
+    }
+
+    .link {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    /* Reduz levemente a imagem para caber melhor na tela do celular */
+    .link img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .link > div {
+        width: 100%;
+    }
+
+    .link p {
+        font-size: 0.9rem;
+    }
+
+    /* Botão em largura total para facilitar o clique com o polegar */
+    .link a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 14px;
+    }
+}
